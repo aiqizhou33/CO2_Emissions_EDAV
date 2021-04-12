@@ -1,2 +1,43 @@
 # Data sources
 
+The data in this project is directly queried from Quandl (https://www.quandl.com/). Quandl is a source of economic, financial, alternative datasets. 
+The carbon dioxide emissions, manufacturing and energy use data of various countries since approximately 1960 are from the World Bank. The data can be directly retrieved in R using the Quandl (API) library.
+
+
+
+```{r, echo=TRUE}
+library(Quandl)
+library(ggplot2)
+library(grid)
+library(tidyverse)
+library(plotly)
+library(countrycode)
+
+Quandl.api_key('dyhrKPXojNdZxDeYganv')
+```
+
+The following function takes the Quandl code of the features (series id or the code for the type of data we want to use) and the country code to quickly get the interested data into R dataframe.
+```{r,echo=TRUE}
+get_data_from_api <- function(url,cc)
+{
+  cc_url =paste(url,cc,sep="_")
+  r = Quandl.datatable('WB/DATA', series_id=url, country_code=cc)
+  return (r)
+}
+
+```
+The different columns in the table retured from Quandl API are as follows
+
+1. series_id: The series id (Quandl code) of the data that was requested
+2. country_code: The ISO code for the country 
+3. country_name: The name of the country
+4. year: The year in which data was collected
+5. value: The value of the requested data.
+
+
+Example: Carbon emissions (in Kilo Ton (kt)) from China
+```{r,echo=TRUE}
+get_data_from_api("EN.ATM.CO2E.KT","CHN")
+```
+
+

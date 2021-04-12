@@ -1,1 +1,11 @@
 # Missing values
+
+Quandl only have data that are already cleaned and organized. 
+
+For the interactive part, the data is collected in a Python file and exported into csv.
+Only the countries that have all the data of CO2 emission and electricity production between 1970-2014 are included. 
+
+The csv file export and data cleaning is done in 'create_csv.py'. 
+The command to run this script is 'python create_csv.py'.
+
+The csv file used for the interactive component is 'data.csv'.

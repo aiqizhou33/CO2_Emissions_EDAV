@@ -1,1 +1,51 @@
 # Data transformation
+
+Because Quandl data is already cleaned and organized, all the data we use are simply put together in a function below. 
+
+```{r}
+
+countries_list =c("USA","CHN","JPN","DEU","IND","GBR","FRA","ITA","BRA","CAN","RUS","KOR","AUS","ESP","MEX","IDN","SAU","TUR","CHF")
+```
+We decided to check the cumulative CO2 emissions of top 20 countries with the highest GDP to see which of these countries emitted the largest amount of CO2.
+
+The following function get_data_from_api reads the data from Quandl API into R.
+```{r,echo=TRUE}
+
+get_data_from_api <- function(url,cc)
+{
+  cc_url =paste(url,cc,sep="_")
+  r = Quandl.datatable('WB/DATA', series_id=url, country_code=cc)
+  return (r)
+}
+  
+```
+
+
+The get_all_data binds a list of interested data features and country codes and returns a table of all the data needed for the plots.
+
+```{r,echo=TRUE}
+get_all_data <-function(countries,data_names)
+{
+  table = data.frame()
+  for (dn_tuple in data_names)
+  {
+    dn = dn_tuple[1]
+    dt = dn_tuple[2]
+    # print(dn)
+    # print(dt)
+    for (cc in countries)
+      {
+        cc_data = get_data_from_api(dn,cc)
+        cc_data["DataType"] = dt 
+        table = rbind(table,cc_data)
+    }
+  }
+  
+  return (table)
+}
+
+
+```
+
+
+

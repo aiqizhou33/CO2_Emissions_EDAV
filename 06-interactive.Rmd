@@ -1,3 +1,14 @@
 # Interactive component
 
+For our interactive component we created a tool to look at the different sources of CO2 Emissions and Electricity production for various countries from 1971 to 2014.
+
+<iframe src="interactive.html" width="400" height="300"></iframe>
+
+
+In case the above plot cannot be viewed, please follow the following instructions.
+
+1. Copy the index.html file and data.csv file into one folder. (It can be the git folder)
+2. Open a terminal window in that folder
+3. Use the following command to launch a simple http server ‘python -m SimpleHTTPServer’ or 'python3 -m http.server'
+4. Open the url “http://localhost:8000/interactive.html” in a browser window to access the interactive plot.
 

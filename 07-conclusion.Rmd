@@ -1,2 +1,21 @@
 # Conclusion
 
+The goal of our project is to answer the following three questions:
+
+1. What countries are responsible for the greatest amount of co2 emissions?
+2. What could be the possible causes for this CO2 emissions?
+3. What are the possible ways we can reduce this?
+
+* Our first plot shows the movement of CO2 emissions (kilotons) of the top 20 countries with the highest GDP from 1960 to 2015. The result shows that in 1960, the US, Russia, China, the UK and France had the highest CO2 emissions. In the past 50 years, many countries had a steady increase in CO2 emissions due to rapid industrialization in countries like China and India, the countries with the highest CO2 emissions changed drastically. Starting 2005, China exceeded the US to become the largest CO2 emitter in the world. The most recent largest contributors of CO2 emissions are China, the US, India, Russia and Japan.
+* From the previous observations, we wanted to take a closer look at what is causing the CO2 emissions of the five largest CO2 contributors.
+There are five main sources of carbon dioxide emissions: 
+  + Buildings
+  + Electricity and heat
+  + Manufacturing and construction
+  + Transportation
+  + And other miscellaneous causes
+* In 1975, India and China’s main source of CO2 emissions was from manufacturing and construction. After the 1990s, the biggest contributor to CO2 emissions is Electricity and heating for most countries.
+Since electricity is one of the biggest sources of CO2 is electricity production, we listed out some methods of electricity production and its percentage in the electricity market. China and India rely the most heavily on coal. Combined with the significant increase in CO2 production and increasing use of electricity in these two countries, we can conclude that a high percentage of CO2 emission comes from the production of electricity using coal. 
+* Some countries like the US had a decrease in the CO2 emission in recent years. From the Cleveland dot plots of a few years 1975, 1985, 1995, 2005, 2014, we can see that the US is using less and less coal in order to produce electricity. There is a higher percentage of electricity production using natural gas and nuclear power, which can be a reason for the decrease in CO2 production in recent years.
+
+
