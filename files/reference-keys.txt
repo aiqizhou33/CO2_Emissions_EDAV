@@ -1,0 +1,10 @@
+introduction
+data-sources
+data-transformation
+missing-values
+results
+the-following-plot-shows-the-top-20-countries-with-the-highest-gdp-and-their-co2-emission-over-the-years-in-a-moving-plot
+the-following-graphs-shows-some-distribution-of-possible-producers-of-co2-over-different-years-19751985199520052014
+how-electricity-is-produced
+interactive-component
+conclusion
